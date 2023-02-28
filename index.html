@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/img/logoLeaf.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/dafd881085.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>PlantLife</title>
+  </head>
+  <body>
+    <div id="preloader"></div>
+    <header>
+      <!-- Nav bar -->
+      <div class="header-container">
+        <a class="logo" href="#"
+          ><img src="/img/plantLogo.png" alt="leaf" />PlantLife</a
+        >
+        <nav class="primary-nav">
+          <button class="mobile-buttons" aria-expanded="false">
+            <i class="fa-solid fa-bars open"></i>
+          </button>
+          <ul class="nav-list mobile-nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tips">Tips</a></li>
+            <li><a href="#shop">Shop</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero/Home section -->
+      <section class="hero-section">
+        <div class="grid">
+          <div class="flex grid-item-1">
+            <div class="hero-text-section">
+              <h1 class="hero-title">
+                Take Care of<br /><span>your plants</span>
+              </h1>
+              <p>
+                PlantLife helps you discover the best way to take care of your
+                plants by giving you the latest tips and tricks
+              </p>
+              <!-- <a class="learn-more" href="#tips">Learn More »</a> -->
+            </div>
+            <div class="hero-img-section">
+              <img class="hero-img" src="img/mainHero.png" />
+            </div>
+          </div>
+          <div class="all-plant-types grid-item-2">
+            <div class="plant-types">
+              <img src="img/indoor.png" alt="indoor plant" />
+              <div class="plant-info">
+                <h3>Indoor plants</h3>
+                <a class="learn-more" href="#tips">Learn More »</a>
+              </div>
+            </div>
+            <div class="plant-types">
+              <img src="img/outdoor.png" alt="outdoor plant" />
+              <div class="plant-info">
+                <h3>Outdoor plants</h3>
+                <a class="learn-more" href="#tips">Learn More »</a>
+              </div>
+            </div>
+            <div class="plant-types">
+              <img src="img/tropical.png" alt="tropical plant" />
+              <div class="plant-info">
+                <h3>Tropical plants</h3>
+                <a class="learn-more" href="#tips">Learn More »</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End of Home section -->
+
+      <!-- About section -->
+
+      <section class="about-section" id="about">
+        <div class="about-flex">
+          <div class="about-img-section">
+            <img class="about-img" src="img/womanPlanting.png" alt="" />
+          </div>
+          <div class="about-info">
+            <div class="about-title">
+              <h2><span>Who</span> we are</h2>
+              <p>
+                PlantLife is all about taking care of plants. No matter what
+                type of plant you have, we know how to take care of it.<br />
+                We believe plants provide three things:
+              </p>
+            </div>
+            <div class="about-accordion">
+              <div class="accordion-item">
+                <div class="accordion-title">
+                  <!-- <p>Joy <span><i class="fa-regular fa-sun"></i></span></p> -->
+                  <p>
+                    Joy
+                    <span
+                      ><img class="icon" src="img/sunIcon.png" alt=""
+                    /></span>
+                  </p>
+                  <button class="accordion-arrow">
+                    <i class="fa-solid fa-angle-down"></i>
+                  </button>
+                </div>
+                <div class="accordion-info">
+                  <p>
+                    Plants are living things that bring vibrancy and beauty to
+                    any space, making them a natural source of joy. Caring for
+                    plants gives people a sense of purpose and accomplishment.
+                    Research has shown that being around plants can reduce
+                    stress and improve mental health, leading to a greater sense
+                    of joy and well-being.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-title">
+                  <!-- <p>Growth <span><i class="fa-solid fa-plant-wilt"></i></span></p> -->
+                  <p>
+                    Growth
+                    <span
+                      ><img class="icon" src="img/growing.png" alt=""
+                    /></span>
+                  </p>
+                  <button class="accordion-arrow">
+                    <i class="fa-solid fa-angle-down"></i>
+                  </button>
+                </div>
+                <div class="accordion-info">
+                  <p>
+                    Engaging in gardening or other plant-related activities can
+                    provide a sense of purpose, accomplishment, and connection
+                    to nature, all of which contribute to personal growth and
+                    well-being. Plants are a rich source of nutrients, vitamins,
+                    and minerals that are essential for human growth and
+                    development, and form an integral part of a healthy diet.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-title">
+                  <!-- <p>Connection <span><i class="fa-solid fa-circle-nodes"></i></span></p> -->
+                  <p>
+                    Connection
+                    <span
+                      ><img class="icon" src="img/connectIcon.png" alt=""
+                    /></span>
+                  </p>
+                  <button class="accordion-arrow">
+                    <i class="fa-solid fa-angle-down"></i>
+                  </button>
+                </div>
+                <div class="accordion-info">
+                  <p>
+                    Plants have the ability to bring people together by creating
+                    shared experiences and common interests, such as gardening
+                    or admiring the natural beauty of a flower. Many cultures
+                    have longstanding traditions and practices that involve
+                    plants, such as the use of herbs in traditional medicine or
+                    the exchange of flowers as gifts, which can serve as a means
+                    of connecting people to their heritage and community.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="video-section">
+          <div class="video">
+            <h2>Houseplant Care <span>Tips!</span></h2>
+            <iframe height="315" src="https://www.youtube.com/embed/LZhnCxG5c6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div> -->
+      </section>
+
+      <!-- End of About section -->
+
+      <!-- Tips section -->
+
+      <section class="tips-section" id="tips">
+        <div class="video-section">
+          <div class="video">
+            <h2>Houseplant Care <span>Tips!</span></h2>
+            <iframe
+              height="315"
+              src="https://www.youtube.com/embed/LZhnCxG5c6s"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="tip-grid">
+          <div class="left">
+            <div class="tips">
+              <div class="tip-title">
+                <h3 class="tip-main-title left-title">01</h3>
+                <p class="tip-sub-title left-title">Water your plants!</p>
+                <!-- img? -->
+              </div>
+              <div class="hidden-items">
+                <!-- <p>Water your plants!</p> -->
+                <p class="hidden-item">
+                  Different plants have different water requirements, so it's
+                  important to research the specific needs of each of your
+                  plants. Generally, plants should be watered when the soil
+                  feels dry to the touch, but be careful not to overwater them
+                  as this can lead to root rot.
+                </p>
+                <img src="./img/plantShop/watering.png" />
+              </div>
+            </div>
+          </div>
+          <div class="center">
+            <div class="tips">
+              <div class="tip-title">
+                <h3 class="tip-main-title center-title">02</h3>
+                <p class="tip-sub-title center-title">Provide Sunlight!</p>
+                <!-- img? -->
+              </div>
+              <div class="hidden-items">
+                <p class="hidden-item">
+                  Most plants require a certain amount of sunlight to thrive, so
+                  it's important to place them in an area where they will
+                  receive the appropriate amount of light.
+                </p>
+                <img src="img/plantShop/sun.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="tips">
+              <div class="tip-title">
+                <h3 class="tip-main-title right-title">03</h3>
+                <p class="tip-sub-title right-title">Monitor for pests!</p>
+                <!-- img? -->
+              </div>
+              <div class="hidden-items">
+                <p class="hidden-item">
+                  Pests and diseases can quickly destroy a plant, so it's
+                  important to regularly inspect your plants for any signs of
+                  infestation or illness. If you notice any issues, take action
+                  immediately to prevent the problem from spreading.
+                </p>
+                <img src="img/plantShop/pests.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- end of tips -->
+
+      <!-- shop section -->
+
+      <section class="shop-section" id="shop">
+        <h3 class="shop-header">Shop <span>Best Sellers</span></h3>
+        <div class="shop-items">
+          <div class="shop-item">
+            <img
+              src="./img/plantShop/cactus.png"
+              alt=""
+              class="shop-item-image"
+            />
+            <div class="shop-item-details">
+              <p class="shop-item-title">Cactus</p>
+              <p class="shop-item-price">$12.99</p>
+              <button class="shop-item-button learn-more">Add to cart</button>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img
+              src="./img/plantShop/aloeVera.png"
+              alt=""
+              class="shop-item-image"
+            />
+            <div class="shop-item-details">
+              <p class="shop-item-title">Aloe Vera</p>
+              <p class="shop-item-price">$23.95</p>
+              <button class="shop-item-button learn-more">Add to cart</button>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img
+              src="./img/plantShop/babyTears.png"
+              alt=""
+              class="shop-item-image"
+            />
+            <div class="shop-item-details">
+              <p class="shop-item-title">Baby Tears</p>
+              <p class="shop-item-price">$19.99</p>
+              <button class="shop-item-button learn-more">Add to cart</button>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img
+              src="./img/plantShop/splitLeaf.png"
+              alt=""
+              class="shop-item-image"
+            />
+            <div class="shop-item-details">
+              <p class="shop-item-title">Split Leaf</p>
+              <p class="shop-item-price">$25.45</p>
+              <button class="shop-item-button learn-more">Add to cart</button>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img
+              src="./img/plantShop/snakePlant.png"
+              alt=""
+              class="shop-item-image"
+            />
+            <div class="shop-item-details">
+              <p class="shop-item-title">Snake Plant</p>
+              <p class="shop-item-price">$45.00</p>
+              <button class="shop-item-button learn-more">Add to cart</button>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img
+              src="./img/plantShop/eucalyptus.png"
+              alt=""
+              class="shop-item-image"
+            />
+            <div class="shop-item-details">
+              <p class="shop-item-title">Eucalyptus</p>
+              <p class="shop-item-price">$20.00</p>
+              <button class="shop-item-button learn-more">Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <h3 class="shop-header">Cart</h3>
+        <div class="cart-row">
+          <span class="cart-item cart-header">ITEM</span>
+          <span class="cart-price cart-header">PRICE</span>
+          <span class="cart-quantity cart-header">QUANTITY</span>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+          <div class="cart-total-title">Total</div>
+          <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn-purchase learn-more">Check Out</button>
+      </section>
+      <!-- end of ship section -->
+    </main>
+    <footer>
+      <div class="flex-container">
+        <div class="footer-logo-section">
+          <img src="/img/plantLogo.png" alt="" />
+          <p>PlantLife</p>
+        </div>
+        <div>
+          <ul class="footer-nav">
+            <li>
+              <a href="/">
+                <img
+                  src="img/plantShop/house.png"
+                  width="20"
+                  height="20"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#about">
+                <img
+                  src="img/plantShop/about.png"
+                  width="20"
+                  height="20"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#tips">
+                <img
+                  src="img/plantShop/tips.png"
+                  width="20"
+                  height="20"
+                  alt=""
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#shop">
+                <img
+                  src="img/plantShop/shop.png"
+                  width="20"
+                  height="20"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
