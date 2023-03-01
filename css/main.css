@@ -93,17 +93,31 @@ select {
 }
 
 #preloader {
-  background: var(--darker-green) url('/img/loader.gif') no-repeat center center;
+  background: var(--darker-green) url("/img/loader.gif") no-repeat center center;
   height: 100vh;
   width: 100%;
   position: fixed;
   z-index: 100;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
 
 header {
   position: relative;
 }
+
+/* section:not(#home) {
+  display: none;
+} */
 
 .header-container {
   display: flex;
@@ -173,6 +187,18 @@ header {
 
 .hero-section {
   min-height: 100vh;
+  animation: blurred 1s linear 1.5s forwards;
+}
+
+@keyframes blurred {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
 }
 
 .grid {
@@ -333,6 +359,11 @@ header {
   flex: 1;
 }
 
+figcaption {
+  color: var(--main-light);
+  font-weight: bold;
+}
+
 .about-title {
   margin-bottom: 2rem;
 }
@@ -415,6 +446,18 @@ header {
 
 .accordion-item.active .accordion-info {
   display: block;
+  animation: showItems 0.2s linear forwards;
+}
+
+@keyframes showItems {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .accordion-item.active .accordion-title {
@@ -499,12 +542,28 @@ header {
 }
 
 .video-section {
-  background: 
-      linear-gradient(135deg,#0000 20.5%,#82aea0 0 29.5%,#0000 0) 0 24px,
-      linear-gradient( 45deg,#0000 8%,#82aea0 0 17%, #0000 0 58%) 48px 0,
-      linear-gradient(135deg,#0000 8%,#82aea0 0 17%, #0000 0 58%,#82aea0 0 67%,#0000 0),        
-      linear-gradient( 45deg,#0000 8%,#82aea0 0 17%, #0000 0 58%,#82aea0 0 67%,#0000 0 83%,#82aea0 0 92%,#0000 0),
-      #5d7a70;
+  background: linear-gradient(135deg, #0000 20.5%, #82aea0 0 29.5%, #0000 0) 0
+      24px,
+    linear-gradient(45deg, #0000 8%, #82aea0 0 17%, #0000 0 58%) 48px 0,
+    linear-gradient(
+      135deg,
+      #0000 8%,
+      #82aea0 0 17%,
+      #0000 0 58%,
+      #82aea0 0 67%,
+      #0000 0
+    ),
+    linear-gradient(
+      45deg,
+      #0000 8%,
+      #82aea0 0 17%,
+      #0000 0 58%,
+      #82aea0 0 67%,
+      #0000 0 83%,
+      #82aea0 0 92%,
+      #0000 0
+    ),
+    #5d7a70;
   background-size: 96px 96px;
   padding-block: 3rem;
   margin-top: 5rem;
@@ -533,7 +592,7 @@ header {
 
 .video iframe {
   width: 560px;
-  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, .35);
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.35);
 }
 
 /* end of tip section */

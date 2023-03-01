@@ -11,6 +11,36 @@ const cartItemContainer = document.querySelector(".cart-items");
 const cartRows = document.querySelectorAll(".cart-row");
 const cartTotal = document.querySelector(".cart-total-price");
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    console.log(entry)
+    if(entry.isIntersecting) {
+      entry.target.classList.add('show')
+    } else {
+      entry.target.classList.remove('show')
+    }
+  })
+})
+
+const hiddenElements = document.querySelectorAll('.hidden')
+hiddenElements.forEach(el => observer.observe(el))
+
+// const sections = document.querySelectorAll('section')
+// const links = document.querySelectorAll('nav a')
+
+// links.forEach(link => {
+//   link.addEventListener('click', () => {
+//     const selectedSection = document.querySelector(link.hash)
+//     sections.forEach(section => {
+//       if (section === selectedSection) {
+//         section.style.display = 'block'
+//       } else {
+//         section.style.display = 'none'
+//       }
+//     })
+//   })
+// })
+
 // mobile nav
 
 let mobile = false;

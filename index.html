@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+<!-- EXAMPLE CODE HEADER/DISCLAIMER
+ 
+Project:  Project3 - Responsive Web Site-PlantLife
+Name: Taylie Whitworth
+Submitted: 3/1/2023
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+ 
+Reflection (1-2 paragraphs):  I really enjoyed creating this website. I got the design inspo from dribble and was able to come up with PlantLife.
+This website is all about how to take care of plants. I thought it would be cool to add a video from youtube of someone showing way to take care of plants.
+I also added a shopping section to buy plants. I created the shopping cart functionality using JavaScript. I also created all the images myself in Canva. 
+I liked this project because there are so many ways to improve it and make it even more unique! 
+ 
+-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,7 +38,7 @@
     <title>PlantLife</title>
   </head>
   <body>
-    <div id="preloader"></div>
+    <!-- <div id="preloader"></div> -->
     <header>
       <!-- Nav bar -->
       <div class="header-container">
@@ -31,7 +50,7 @@
             <i class="fa-solid fa-bars open"></i>
           </button>
           <ul class="nav-list mobile-nav-list">
-            <li><a href="/">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#tips">Tips</a></li>
             <li><a href="#shop">Shop</a></li>
@@ -42,7 +61,7 @@
 
     <main>
       <!-- Hero/Home section -->
-      <section class="hero-section">
+      <section class="hero-section" id="home">
         <div class="grid">
           <div class="flex grid-item-1">
             <div class="hero-text-section">
@@ -89,10 +108,16 @@
 
       <!-- About section -->
 
-      <section class="about-section" id="about">
+      <section class="about-section hidden" id="about">
         <div class="about-flex">
           <div class="about-img-section">
-            <img class="about-img" src="img/womanPlanting.png" alt="" />
+            <figure>
+              <img class="about-img" src="img/womanPlanting.png" alt="" />
+              <figcaption>
+                Plant new life
+                <span><i class="fa-brands fa-pagelines"></i></span>
+              </figcaption>
+            </figure>
           </div>
           <div class="about-info">
             <div class="about-title">
@@ -192,7 +217,7 @@
 
       <!-- Tips section -->
 
-      <section class="tips-section" id="tips">
+      <section class="tips-section hidden" id="tips">
         <div class="video-section">
           <div class="video">
             <h2>Houseplant Care <span>Tips!</span></h2>
@@ -269,7 +294,7 @@
 
       <!-- shop section -->
 
-      <section class="shop-section" id="shop">
+      <section class="shop-section hidden" id="shop">
         <h3 class="shop-header">Shop <span>Best Sellers</span></h3>
         <div class="shop-items">
           <div class="shop-item">
