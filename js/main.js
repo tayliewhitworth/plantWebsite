@@ -1,6 +1,6 @@
 const mobileBtn = document.querySelector(".mobile-buttons");
 const mobileItems = document.querySelector(".mobile-nav-list");
-const mobileLinks = document.querySelectorAll(".mobile-nav-list a");
+const mobileLinks = document.querySelectorAll(".mobile-nav-list li");
 const accordionItems = document.querySelectorAll(".accordion-item");
 // shopping buttons and items
 const addBtn = document.querySelectorAll(".shop-item-button");
@@ -11,37 +11,49 @@ const cartItemContainer = document.querySelector(".cart-items");
 const cartRows = document.querySelectorAll(".cart-row");
 const cartTotal = document.querySelector(".cart-total-price");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    console.log(entry)
-    if(entry.isIntersecting) {
-      entry.target.classList.add('show')
-    } else {
-      entry.target.classList.remove('show')
+// show and hide items
+let contentSections = ["home", "about", "tips", "shop"];
+let navElements = document.querySelectorAll(".nav-list li");
+let footerElements = document.querySelectorAll(".footer-nav li");
+
+for (let i = 0; i < navElements.length; i++) {
+  navElements[i].addEventListener("click", (e) => {
+    for (let i = 0; i < navElements.length; i++) {
+      navElements[i].classList.remove("selected");
     }
-  })
-})
 
-const hiddenElements = document.querySelectorAll('.hidden')
-hiddenElements.forEach(el => observer.observe(el))
+    let el = e.currentTarget;
+    el.classList.add("selected");
 
-// const sections = document.querySelectorAll('section')
-// const links = document.querySelectorAll('nav a')
+    for (section of contentSections) {
+      let el = document.getElementById(`${section}`);
+      el.classList.remove("show");
+      el.classList.add("hidden");
+    }
 
-// links.forEach(link => {
-//   link.addEventListener('click', () => {
-//     const selectedSection = document.querySelector(link.hash)
-//     sections.forEach(section => {
-//       if (section === selectedSection) {
-//         section.style.display = 'block'
-//       } else {
-//         section.style.display = 'none'
-//       }
-//     })
-//   })
-// })
+    let name = `${el.title}`;
 
-// mobile nav
+    let showEl = document.getElementById(name);
+    showEl.classList.add("show");
+  });
+}
+
+for (let i = 0; i < footerElements.length; i++) {
+  footerElements[i].addEventListener("click", (e) => {
+    let el = e.currentTarget;
+
+    for (section of contentSections) {
+      let el = document.getElementById(`${section}`);
+      el.classList.remove("show");
+      el.classList.add("hidden");
+    }
+
+    let name = `${el.title}`;
+
+    let showEl = document.getElementById(name);
+    showEl.classList.add("show");
+  });
+}
 
 let mobile = false;
 

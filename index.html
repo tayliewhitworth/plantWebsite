@@ -42,7 +42,7 @@ I liked this project because there are so many ways to improve it and make it ev
     <header>
       <!-- Nav bar -->
       <div class="header-container">
-        <a class="logo" href="#"
+        <a class="logo" href=""
           ><img src="/img/plantLogo.png" alt="leaf" />PlantLife</a
         >
         <nav class="primary-nav">
@@ -50,10 +50,10 @@ I liked this project because there are so many ways to improve it and make it ev
             <i class="fa-solid fa-bars open"></i>
           </button>
           <ul class="nav-list mobile-nav-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#tips">Tips</a></li>
-            <li><a href="#shop">Shop</a></li>
+            <li title="home" class="menuBtn selected">Home</li>
+            <li title="about" class="menuBtn">About</li>
+            <li title="tips" class="menuBtn">Tips</li>
+            <li title="shop" class="menuBtn">Shop</li>
           </ul>
         </nav>
       </div>
@@ -61,7 +61,7 @@ I liked this project because there are so many ways to improve it and make it ev
 
     <main>
       <!-- Hero/Home section -->
-      <section class="hero-section" id="home">
+      <section class="hero-section show" id="home">
         <div class="grid">
           <div class="flex grid-item-1">
             <div class="hero-text-section">
@@ -83,21 +83,21 @@ I liked this project because there are so many ways to improve it and make it ev
               <img src="img/indoor.png" alt="indoor plant" />
               <div class="plant-info">
                 <h3>Indoor plants</h3>
-                <a class="learn-more" href="#tips">Learn More »</a>
+                <p class="learn-more">Learn More »</p>
               </div>
             </div>
             <div class="plant-types">
               <img src="img/outdoor.png" alt="outdoor plant" />
               <div class="plant-info">
                 <h3>Outdoor plants</h3>
-                <a class="learn-more" href="#tips">Learn More »</a>
+                <p class="learn-more">Learn More »</p>
               </div>
             </div>
             <div class="plant-types">
               <img src="img/tropical.png" alt="tropical plant" />
               <div class="plant-info">
                 <h3>Tropical plants</h3>
-                <a class="learn-more" href="#tips">Learn More »</a>
+                <p class="learn-more">Learn More »</p>
               </div>
             </div>
           </div>
@@ -393,45 +393,27 @@ I liked this project because there are so many ways to improve it and make it ev
         </div>
         <div>
           <ul class="footer-nav">
-            <li>
-              <a href="/">
-                <img
-                  src="img/plantShop/house.png"
-                  width="20"
-                  height="20"
-                  alt=""
-                />
-              </a>
+            <li title="home">
+              <img
+                src="img/plantShop/house.png"
+                width="20"
+                height="20"
+                alt=""
+              />
             </li>
-            <li>
-              <a href="#about">
-                <img
-                  src="img/plantShop/about.png"
-                  width="20"
-                  height="20"
-                  alt=""
-                />
-              </a>
+            <li title="about">
+              <img
+                src="img/plantShop/about.png"
+                width="20"
+                height="20"
+                alt=""
+              />
             </li>
-            <li>
-              <a href="#tips">
-                <img
-                  src="img/plantShop/tips.png"
-                  width="20"
-                  height="20"
-                  alt=""
-                />
-              </a>
+            <li title="tips">
+              <img src="img/plantShop/tips.png" width="20" height="20" alt="" />
             </li>
-            <li>
-              <a href="#shop">
-                <img
-                  src="img/plantShop/shop.png"
-                  width="20"
-                  height="20"
-                  alt=""
-                />
-              </a>
+            <li title="shop">
+              <img src="img/plantShop/shop.png" width="20" height="20" alt="" />
             </li>
           </ul>
         </div>
