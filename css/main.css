@@ -1,3 +1,21 @@
+/* I went through my CSS and cleaned up my code. I deleted any unnecessary comments or styles.
+I checked what styles were actually being applied and fixed some flex box issues.
+I really liked my original layout so I didn't change much about that.
+Made sure my site was completely mobile responsive.
+
+--SELF GRADE--
+REFACTOR CSS-FIX       A 
+CSS THEME              A 
+CSS THEME TOGGLE     A 
+
+MOBILE RESPONSIVE     A 
+
+ADDITIONAL COMMENTS - 
+I worked really hard on the original site 
+so it was hard for me to come up with 
+modifications but I tried my best! Thanks for the challenge!
+*/
+
 :root {
   --primary: #98c049;
   --dark-green: #1a3306;
@@ -100,17 +118,6 @@ select {
   z-index: 100;
 }
 
-/* .hidden {
-  opacity: 0;
-  filter: blur(5px);
-  transition: all 1s;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-} */
-
 .hidden {
   display: none;
 }
@@ -123,15 +130,12 @@ header {
   position: relative;
 }
 
-/* section:not(#home) {
-  display: none;
-} */
-
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2.5rem;
+  margin-bottom: 4rem;
 }
 
 .logo {
@@ -140,6 +144,25 @@ header {
   text-decoration: none;
   color: var(--main-text);
   font-weight: 700;
+}
+
+.theme {
+  background-color: transparent;
+  border: 1px dashed var(--main-text);
+  padding: 0.75rem;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: var(--main-text);
+  color: var(--main-light);
+  cursor: pointer;
+  outline: 2px dashed var(--main-light);
+  outline-offset: -5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.theme:hover {
+  outline-offset: 5px;
 }
 
 .nav-list {
@@ -151,7 +174,6 @@ header {
 
 .nav-list li {
   cursor: pointer;
-  /* color: currentColor; */
   font-weight: 500;
   transition: color 0.2s ease-in;
 }
@@ -202,7 +224,7 @@ header {
 }
 
 section {
-  animation: blurred .75s linear forwards;
+  animation: blurred 0.75s linear forwards;
 }
 
 @keyframes blurred {
@@ -362,6 +384,7 @@ section {
 
 .about-section {
   min-height: 100vh;
+  margin-top: 4rem;
 }
 
 .about-flex {
@@ -401,6 +424,7 @@ figcaption {
 .about-accordion {
   display: grid;
   gap: 2rem;
+  max-width: 550px;
 }
 
 .accordion-title {
@@ -530,7 +554,6 @@ figcaption {
 }
 
 .hidden-items {
-  /* display: none; */
   max-width: 500px;
   margin-inline: auto;
   padding: 1rem;
@@ -585,7 +608,6 @@ figcaption {
   margin-bottom: 3px;
   border-top: 1px solid var(--main-text);
   border-bottom: 1px solid var(--main-text);
-  /* border-radius: 70% 0% 25% 0% / 25% 25% 25% 25%; */
 }
 
 .video {
@@ -868,10 +890,6 @@ footer {
   .video iframe {
     width: 400px;
   }
-
-  /* .shop-section {
-    margin-top: 420px;
-  } */
 }
 
 @media (hover: none) {

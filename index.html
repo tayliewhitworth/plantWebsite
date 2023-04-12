@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-- EXAMPLE CODE HEADER/DISCLAIMER
  
-Project:  Project3 - Responsive Web Site-PlantLife
+Project:  Project4 - Responsive Web Site-CSS Theme and Refactor - PlantLife
 Name: Taylie Whitworth
-Submitted: 3/1/2023
+Submitted: 4/08/2023
  
 I declare that the following source code was written by me, or provided
 by the instructor for this project. I understand that copying source
@@ -12,10 +12,9 @@ or leaving my code on a public web site constitutes cheating.
 I acknowledge that  If I am found in violation of this policy this may result
 in a zero grade, a permanent record on file and possibly immediate failure of the class.
  
-Reflection (1-2 paragraphs):  I really enjoyed creating this website. I got the design inspo from dribble and was able to come up with PlantLife.
-This website is all about how to take care of plants. I thought it would be cool to add a video from youtube of someone showing way to take care of plants.
-I also added a shopping section to buy plants. I created the shopping cart functionality using JavaScript. I also created all the images myself in Canva. 
-I liked this project because there are so many ways to improve it and make it even more unique! 
+Reflection (1-2 paragraphs): Adding a another CSS Stylesheet was something I've never done before.
+It was cool figuring out what things to change and how to toggle a stylesheet.
+There are so many cool features to add when toggling a stylesheet. This was a fun project.
  
 -->
 <html lang="en">
@@ -36,6 +35,7 @@ I liked this project because there are so many ways to improve it and make it ev
       crossorigin="anonymous"
     ></script>
     <title>PlantLife</title>
+    
   </head>
   <body>
     <div id="preloader"></div>
@@ -45,6 +45,9 @@ I liked this project because there are so many ways to improve it and make it ev
         <a class="logo" href=""
           ><img src="/img/plantLogo.png" alt="leaf" />PlantLife</a
         >
+        <div>
+          <button class="theme" id="theme">Apply Theme</button>
+        </div>
         <nav class="primary-nav">
           <button class="mobile-buttons" aria-expanded="false">
             <i class="fa-solid fa-bars open"></i>

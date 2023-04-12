@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap");
+
+/* 
+Changes I made:
+Added a new font to the whole page
+changed the background color
+changed the color of the text
+changed the direction of the menu
+changed the direction of flex direction for the about page on mobile
+changed the background for the video section
+*/
+
+:root {
+  --main-background: #526a40;
+  --main-text: #fff;
+  --main-light: #13130f;
+  --darker-green: #314026;
+}
+
+body {
+  font-family: "Arsenal";
+}
+
+.header-container {
+  flex-direction: row-reverse;
+}
+
+.about-flex {
+  flex-direction: column-reverse;
+}
+
+.video-section {
+  background: radial-gradient(
+        farthest-side at -33.33% 50%,
+        #0000 52%,
+        #739559 54% 57%,
+        #0000 59%
+      )
+      0 calc(164px / 2),
+    radial-gradient(
+        farthest-side at 50% 133.33%,
+        #0000 52%,
+        #739559 54% 57%,
+        #0000 59%
+      )
+      calc(164px / 2) 0,
+    radial-gradient(
+      farthest-side at 133.33% 50%,
+      #0000 52%,
+      #739559 54% 57%,
+      #0000 59%
+    ),
+    radial-gradient(
+      farthest-side at 50% -33.33%,
+      #0000 52%,
+      #739559 54% 57%,
+      #0000 59%
+    ),
+    #b5ea8c;
+  background-size: calc(164px / 4.667) 164px, 164px calc(164px / 4.667);
+  color: black;
+}
+
+footer {
+  background-color: #11150d;
+}
+
+.footer-logo-section {
+  color: #fff;
+}
