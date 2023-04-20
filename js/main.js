@@ -1,3 +1,25 @@
+// Changes made: split up my js files and seperated them individually. Tried to keep it DRY
+/**
+ * Project Name: Project 5 - Form validation
+ * Name: Taylie Whitworth
+ * Submitted: 4/15/2023
+ * 
+ * I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+
+Reflection: This was a fun addition to add to my personal website. I didn't know
+that you could make seperate js files so that was something I learned.
+I think creating forms is very important to web development so I'm glad we got to do this.
+ */
+
+document.addEventListener("DOMContentLoaded", function () {
+  initValidation("myform");
+});
+
 const mobileBtn = document.querySelector(".mobile-buttons");
 const mobileItems = document.querySelector(".mobile-nav-list");
 const mobileLinks = document.querySelectorAll(".mobile-nav-list li");
@@ -12,71 +34,33 @@ const cartRows = document.querySelectorAll(".cart-row");
 const cartTotal = document.querySelector(".cart-total-price");
 
 // adding theme stylesheet
-document.getElementById('theme').addEventListener('click', function() {
-  toggleStylesheet('css/theme.css')
-})
+document.getElementById("theme").addEventListener("click", function () {
+  toggleStylesheet("css/theme.css");
+});
 
 function toggleStylesheet(href, onoff) {
-  let existingNode = 0 //get existing stylesheet node if it already exists:
+  let existingNode = 0; //get existing stylesheet node if it already exists:
   for (let i = 0; i < document.styleSheets.length; i++) {
-    if (document.styleSheets[i].href && document.styleSheets[i].href.indexOf(href) > -1) existingNode = document.styleSheets[i].ownerNode
+    if (
+      document.styleSheets[i].href &&
+      document.styleSheets[i].href.indexOf(href) > -1
+    )
+      existingNode = document.styleSheets[i].ownerNode;
   }
-  if (onoff == undefined) onoff = !existingNode //toggle on or off if undefined
-  if (onoff) { //TURN ON:
-    if (existingNode) return onoff //already exists so cancel now
-    let link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
+  if (onoff == undefined) onoff = !existingNode; //toggle on or off if undefined
+  if (onoff) {
+    //TURN ON:
+    if (existingNode) return onoff; //already exists so cancel now
+    let link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
     link.href = href;
-    document.getElementsByTagName('head')[0].appendChild(link);
-  } else { //TURN OFF:
-    if (existingNode) existingNode.parentNode.removeChild(existingNode)
+    document.getElementsByTagName("head")[0].appendChild(link);
+  } else {
+    //TURN OFF:
+    if (existingNode) existingNode.parentNode.removeChild(existingNode);
   }
-  return onoff
-}
-
-// show and hide items
-let contentSections = ["home", "about", "tips", "shop"];
-let navElements = document.querySelectorAll(".nav-list li");
-let footerElements = document.querySelectorAll(".footer-nav li");
-
-for (let i = 0; i < navElements.length; i++) {
-  navElements[i].addEventListener("click", (e) => {
-    for (let i = 0; i < navElements.length; i++) {
-      navElements[i].classList.remove("selected");
-    }
-
-    let el = e.currentTarget;
-    el.classList.add("selected");
-
-    for (section of contentSections) {
-      let el = document.getElementById(`${section}`);
-      el.classList.remove("show");
-      el.classList.add("hidden");
-    }
-
-    let name = `${el.title}`;
-
-    let showEl = document.getElementById(name);
-    showEl.classList.add("show");
-  });
-}
-
-for (let i = 0; i < footerElements.length; i++) {
-  footerElements[i].addEventListener("click", (e) => {
-    let el = e.currentTarget;
-
-    for (section of contentSections) {
-      let el = document.getElementById(`${section}`);
-      el.classList.remove("show");
-      el.classList.add("hidden");
-    }
-
-    let name = `${el.title}`;
-
-    let showEl = document.getElementById(name);
-    showEl.classList.add("show");
-  });
+  return onoff;
 }
 
 let mobile = false;

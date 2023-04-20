@@ -35,7 +35,6 @@ There are so many cool features to add when toggling a stylesheet. This was a fu
       crossorigin="anonymous"
     ></script>
     <title>PlantLife</title>
-    
   </head>
   <body>
     <div id="preloader"></div>
@@ -57,6 +56,7 @@ There are so many cool features to add when toggling a stylesheet. This was a fu
             <li title="about" class="menuBtn">About</li>
             <li title="tips" class="menuBtn">Tips</li>
             <li title="shop" class="menuBtn">Shop</li>
+            <li title="form" class="menuBtn log">Log Visit</li>
           </ul>
         </nav>
       </div>
@@ -386,7 +386,182 @@ There are so many cool features to add when toggling a stylesheet. This was a fu
         </div>
         <button class="btn-purchase learn-more">Check Out</button>
       </section>
-      <!-- end of ship section -->
+      <!-- end of shop section -->
+
+      <section class="form-section hidden" id="form">
+        <div class="form-container">
+          <div class="form-title">
+            <h3>Visitor Form</h3>
+          </div>
+          <div class="successMsg" id="success" style="display: none">
+            <h3>Thanks for visiting PlantLife!</h3>
+          </div>
+          <form
+            id="myform"
+            novalidate
+            method="GET"
+            action="https://wp.zybooks.com/form-viewer.php"
+          >
+            <div class="inputs">
+              <div class="input-container">
+                <label for="firstName">First Name</label>
+                <input
+                  required
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Enter your first name"
+                />
+                <div class="errMsg"></div>
+              </div>
+              <div class="input-container">
+                <label for="lastName">Last Name</label>
+                <input
+                  required
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Enter your last name"
+                />
+                <div class="errMsg"></div>
+              </div>
+            </div>
+            <div class="input-container">
+              <label for="address">Address</label>
+              <input
+                required
+                class="address"
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Enter your address"
+              />
+              <div class="errMsg"></div>
+            </div>
+            <div class="addy-inputs">
+              <div class="input-container">
+                <label for="city">City</label>
+                <input
+                  required
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Enter your city"
+                />
+                <div class="errMsg"></div>
+              </div>
+              <div class="input-container">
+                <label for="state">State</label>
+                <input
+                  required
+                  min="2"
+                  max="2"
+                  type="text"
+                  id="state"
+                  name="state"
+                  placeholder="Enter your state"
+                />
+                <div class="errMsg"></div>
+              </div>
+              <div class="input-container">
+                <label for="zip">Zip Code</label>
+                <input
+                  required
+                  type="text"
+                  id="zip"
+                  name="zip"
+                  placeholder="Enter zip code"
+                />
+                <div class="errMsg"></div>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-container">
+                <label for="email">Email</label>
+                <input
+                  required
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                />
+                <div class="errMsg"></div>
+              </div>
+              <div class="input-container">
+                <label for="phone">Phone</label>
+                <input
+                  required
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter your phone"
+                />
+                <div class="errMsg"></div>
+              </div>
+            </div>
+            <div class="input-container find-page">
+              <p>How did you find my page?</p>
+              <div class="errMsg"></div>
+              <div class="checkbox-inputs">
+                <ul class="checkbox-list">
+                  <li>
+                    <input
+                      type="checkbox"
+                      id="google"
+                      name="findPage"
+                      value="google"
+                    />
+
+                    <label for="google">Google Search</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      id="facebook"
+                      name="findPage"
+                      value="facebook"
+                    />
+
+                    <label for="facebook">Facebook</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      id="friend"
+                      name="findPage"
+                      value="friend"
+                    />
+                    <label for="friend">Friend</label>
+                  </li>
+                  <li>
+                    <input
+                      type="checkbox"
+                      id="newspaper"
+                      name="findPage"
+                      value="newspaper"
+                    />
+                    <label for="newspaper">News Paper</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="input-container">
+              <label for="comment">Comments</label>
+              <textarea
+                rows="6"
+                id="comment"
+                name="comment"
+                placeholder="Leave a comment"
+              ></textarea>
+            </div>
+
+            <div class="submit-container">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="flex-container">
@@ -423,6 +598,8 @@ There are so many cool features to add when toggling a stylesheet. This was a fu
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script defer src="js/validate.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/pages.js"></script>
   </body>
 </html>

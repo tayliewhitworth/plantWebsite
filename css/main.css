@@ -178,7 +178,20 @@ header {
   transition: color 0.2s ease-in;
 }
 
-.nav-list li .selected {
+.nav-list .log {
+  padding: 0.5rem;
+  color: var(--main-light);
+  background-color: var(--main-text);
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-list .log:hover {
+  background-color: var(--main-light);
+  color: var(--main-text);
+}
+
+.nav-list li.selected {
   color: var(--main-light);
 }
 
@@ -722,6 +735,117 @@ figcaption {
 }
 
 /* end of shop section */
+
+/* Beginning of form */
+
+.form-section {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.errMsg {
+  color: red;
+}
+
+input.was-validated:invalid {
+  color: red;
+  border: 1px solid red;
+}
+
+input.was-validated:invalid ~ div {
+  display: block;
+}
+
+input:valid ~ div {
+  display: none;
+}
+
+input:invalid ~ div {
+  display: none;
+}
+
+.form-title {
+  padding-bottom: 1rem;
+}
+
+.form-container {
+  background-color: var(--main-text);
+  max-width: 700px;
+  margin: auto;
+  color: var(--main-light);
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block: 1rem;
+}
+
+input {
+  padding: 0.5rem;
+}
+
+.address,
+textarea {
+  min-width: 100%;
+}
+
+.inputs,
+.addy-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.inputs input {
+  min-width: 300px;
+}
+
+.addy-inputs input {
+  max-width: 150px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.checkbox-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="checkbox"] ~ div.errMsg {
+  text-align: right;
+}
+
+textarea {
+  padding: 1rem;
+}
+
+button[type="submit"] {
+  padding: 0.5rem;
+  font-weight: bold;
+  background-color: var(--main-background);
+  color: var(--main-text);
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  color: var(--main-light);
+}
+
+/* End of form */
 
 /* footer */
 
